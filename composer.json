@@ -1,0 +1,16 @@
+{
+    "require": {
+        "jaeger/querylist": "^4.1",
+        "houdunwang/cache": "^1.0",
+        "houdunwang/db": "^1.0",
+        "catfan/medoo": "^1.6",
+        "topthink/think-cache": "^1.1"
+
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.laravel-china.org"
+        }
+    }
+}
