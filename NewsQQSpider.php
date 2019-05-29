@@ -120,7 +120,6 @@ class NewsQQSpider
     public function writeSql($data)
     {
         echo "写入".$data['title']."----------------";
-
         if ($this->db->get('data_temp_article', "id", [
             'uuid' => $data['uuid']
         ])) {

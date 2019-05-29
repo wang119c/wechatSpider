@@ -5,6 +5,6 @@ wechatSpider.php  没有进行封装 ，只是作为临时使用 ,但是参考�
 
 
 NewsQQSpider 腾讯新闻爬取(使用puppeteer,使用composer install就好) (临时爬取，只做参考) 
-需要
+需要安装（puppeteer）
 composer require jaeger/querylist-puppeteer
 npm install @nesk/puphpeteer
