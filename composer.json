@@ -4,7 +4,8 @@
         "houdunwang/cache": "^1.0",
         "houdunwang/db": "^1.0",
         "catfan/medoo": "^1.6",
-        "topthink/think-cache": "^1.1"
+        "topthink/think-cache": "^1.1",
+        "jaeger/querylist-puppeteer": "^4.0"
 
     },
     "repositories": {
