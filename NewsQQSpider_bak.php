@@ -5,9 +5,7 @@
  * Date: 2019/5/23
  * Time: 18:11
  */
-//require "./vendor/autoload.php";
-require_once "BaseSpider.php";
-
+require "./vendor/autoload.php";
 
 use http\Env\Response;
 use Medoo\Medoo;
@@ -18,29 +16,23 @@ use QL\QueryList;
  * 新闻qq
  * Class NewsQQSpider
  */
-class NewsQQSpider extends BaseSpider
+class NewsQQSpider111
 {
-    public function __construct()
-    {
-        $urls = [
-            "https://new.qq.com/ch2/ai",
-            "https://new.qq.com/ch2/internet",
-            "https://new.qq.com/tag/276813",
-            "https://new.qq.com/ch2/hgjj",
-            "https://new.qq.com/ch2/jinr"
-        ];
-        $headers = [
-//    'Referer' => 'https://querylist.cc/',
-//    'User-Agent' => 'testing/1.0',
-//    'Accept' => 'application/json',
-//    'X-Foo' => ['Bar', 'Baz'],
-//    // 携带cookie
-//    'Cookie' => 'abc=111;xxx=222',
-//    'cache' => $cache_path,
-//    'cache_ttl' => 600
-        ];
+    private $urls;
+    private $headers;
+    private $db;
 
-        parent::__construct($urls, $headers);
+    public function __construct($urls, $headers)
+    {
+        $this->urls = $urls;
+        $this->headers = $headers;
+        $this->db = new Medoo([
+            'database_type' => 'mysql',
+            'database_name' => 'topai',
+            'server' => '47.93.204.37',
+            'username' => 'root',
+            'password' => '9jXv57znY4D.B'
+        ]);
     }
 
     /**
@@ -52,7 +44,7 @@ class NewsQQSpider extends BaseSpider
     public function run()
     {
         foreach ($this->urls as $key => $val) {
-            echo "抓取url:" . $val . "----------------";
+            echo "抓取url:".$val."----------------";
             $list = $this->getQueryData($val);
             $time = time();
             foreach ($list as $item) {
@@ -61,9 +53,9 @@ class NewsQQSpider extends BaseSpider
                 $data['source'] = isset($item['source']) ? $item['source'] : "";
                 $data['summary'] = isset($item['summary']) ? $item['summary'] : "";
                 $data['url'] = isset($item['href']) ? $item['href'] : "";
-                if (isset($item['href'])) {
+                if(isset($item['href'])){
                     $data['message'] = $this->getQueryContent($item['href']);
-                } else {
+                }else{
                     continue;
                 }
                 $data['uuid'] = md5($item['href']);
@@ -117,13 +109,74 @@ class NewsQQSpider extends BaseSpider
         })->rules($rules)->queryData();
         return $html;
     }
+
+    /**
+     * 写入数据库
+     * @param $data
+     * Created by PhpStorm.
+     * Author:huizi
+     * Date: 2019/3/21-15:40
+     */
+    public function writeSql($data)
+    {
+        echo "写入".$data['title']."----------------";
+
+        if ($this->db->get('data_temp_article', "id", [
+            'uuid' => $data['uuid']
+        ])) {
+            $this->db->update("data_temp_article", [
+                'title' => $data['title'],
+                'cover' => $data['cover'],
+                'source' => $data['source'],
+                'message' => $data['message'],
+                'url' => $data['url'],
+                'summary' => $data['summary'],
+                'catch_type' => $data['catch_type'],
+                'updatetime' => $_SERVER["REQUEST_TIME"]
+            ], [
+                'uuid' => $data['uuid']
+            ]);
+        } else {
+            $data = $this->db->insert('data_temp_article', [
+                'title' => $data['title'],
+                'cover' => $data['cover'],
+                'source' => $data['source'],
+                'message' => $data['message'],
+                'url' => $data['url'],
+                'summary' => $data['summary'],
+                'uuid' => $data['uuid'],
+                'catch_type' => $data['catch_type'],
+                'createtime' => $_SERVER["REQUEST_TIME"],
+                'updatetime' => $_SERVER["REQUEST_TIME"]
+            ]);
+        }
+    }
+
+
 }
 
 
+$urls = [
+    "https://new.qq.com/ch2/ai",
+    "https://new.qq.com/ch2/internet",
+    "https://new.qq.com/tag/276813",
+    "https://new.qq.com/ch2/hgjj",
+    "https://new.qq.com/ch2/jinr"
+];
 
-//$cache_path = __DIR__ . '/temp/';
+$cache_path = __DIR__ . '/temp/';
+
+$headers = [
+//    'Referer' => 'https://querylist.cc/',
+//    'User-Agent' => 'testing/1.0',
+//    'Accept' => 'application/json',
+//    'X-Foo' => ['Bar', 'Baz'],
+//    // 携带cookie
+//    'Cookie' => 'abc=111;xxx=222',
+//    'cache' => $cache_path,
+//    'cache_ttl' => 600
+];
 
 
-//
-//$newsQQ = new NewsQQSpider($urls, $headers);
-//$newsQQ->run();
+$newsQQ = new NewsQQSpider($urls, $headers);
+$newsQQ->run();

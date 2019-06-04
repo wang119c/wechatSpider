@@ -1,33 +1,23 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: huizi
- * Date: 2019/5/23
- * Time: 18:11
- */
-//require "./vendor/autoload.php";
+
 require_once "BaseSpider.php";
 
-
-use http\Env\Response;
-use Medoo\Medoo;
 use Nesk\Rialto\Data\JsFunction;
 use QL\QueryList;
 
 /**
- * 新闻qq
- * Class NewsQQSpider
+ * Created by PhpStorm.
+ * User: huizi
+ * Date: 2019/6/3
+ * Time: 14:21
  */
-class NewsQQSpider extends BaseSpider
+class NewsIfengSpider extends BaseSpider
 {
+
     public function __construct()
     {
         $urls = [
-            "https://new.qq.com/ch2/ai",
-            "https://new.qq.com/ch2/internet",
-            "https://new.qq.com/tag/276813",
-            "https://new.qq.com/ch2/hgjj",
-            "https://new.qq.com/ch2/jinr"
+            "http://tech.ifeng.com/blockchain/"
         ];
         $headers = [
 //    'Referer' => 'https://querylist.cc/',
@@ -39,16 +29,9 @@ class NewsQQSpider extends BaseSpider
 //    'cache' => $cache_path,
 //    'cache_ttl' => 600
         ];
-
         parent::__construct($urls, $headers);
     }
 
-    /**
-     * 运行数据
-     * Created by PhpStorm.
-     * Author:huizi
-     * Date: 2019/5/23-18:20
-     */
     public function run()
     {
         foreach ($this->urls as $key => $val) {
@@ -62,12 +45,12 @@ class NewsQQSpider extends BaseSpider
                 $data['summary'] = isset($item['summary']) ? $item['summary'] : "";
                 $data['url'] = isset($item['href']) ? $item['href'] : "";
                 if (isset($item['href'])) {
-                    $data['message'] = $this->getQueryContent($item['href']);
+                    $data['message'] = $this->getQueryContent("http:" . $item['href']);
                 } else {
                     continue;
                 }
                 $data['uuid'] = md5($item['href']);
-                $data['catch_type'] = 2;
+                $data['catch_type'] = 3;
                 $data['createtime'] = $time;
                 $data['updatetime'] = $time;
                 $this->writeSql($data);
@@ -76,54 +59,63 @@ class NewsQQSpider extends BaseSpider
         }
     }
 
-
     public function getQueryContent($url)
     {
         sleep(mt_rand(5, 10));
-        $ql = QueryList::get($url);
-        $html = $ql->encoding('UTF-8', 'GB2312')
-            ->removeHead()
-            ->find(".content.clearfix")->html();
+        $ql = QueryList::getInstance();
+        $ql->use(\QL\Ext\Chrome::class);
+        $rules = [
+            "content1" => [".main_content-LcrEruCc", "html"],
+            "content2" => [".main_content-1mF1eaKb", "html"]
+        ];
+        $html = $ql->chrome(function ($page, $browser) use ($url) {
+            $page->goto($url);
+            $html = $page->content();
+            $browser->close();
+            return $html;
+        })->rules($rules)->queryData();
+        if (isset($html[0]['content1']) && $html[0]['content1'] != "") {
+            $html = $html[0]['content1'];
+        } else {
+            $html = $html[0]['content2'];
+        }
         return $html;
     }
-
 
     public function getQueryData($url)
     {
         $ql = QueryList::getInstance();
         $ql->use(\QL\Ext\Chrome::class);
         $rules = [
-            'title' => ['.channel_mod .list .detail h3', 'text'],
-            'href' => [".channel_mod .list .detail h3 a", "href"],
-            'cover' => ['.channel_mod .list a.picture img', 'src'],
-            'source' => ['.channel_mod .list .binfo a.source', 'text']
+            'title' => ['.news-stream-newsStream-news-item-title a', 'text'],
+            'href' => [".news-stream-newsStream-news-item-title a", "href"],
+            'cover' => ['.news-stream-newsStream-image-link img', 'src'],
+            'source' => ['.news-stream-newsStream-mr10', 'text']
         ];
         $html = $ql->chrome(function ($page, $browser) use ($url) {
             $page->goto($url);
-            $page->evaluate(JsFunction::createWithBody("
-                 var i = 0 ;
-                 var timer = setInterval(function(){
-                    if(i>=20){
-                        clearInterval(timer);
-                    }
-                    window.scrollBy(0, i*100);
-                    i++;
-                 },3000);
-            "));
-            sleep(55);
+            $page->waitForSelector(".news-stream-basic-more");
+            for ($i = 0; $i < 9; $i++) {
+                sleep(mt_rand(5, 10));
+                $page->waitForSelector(".news-stream-basic-more");
+                $page->click(".news-stream-basic-more");
+            }
             $html = $page->content();
             $browser->close();
             return $html;
-        })->rules($rules)->queryData();
+        },[
+            'headless'=>false
+        ])->rules($rules)->queryData();
         return $html;
     }
 }
 
 
 
-//$cache_path = __DIR__ . '/temp/';
+
+$cache_path = __DIR__ . '/temp/';
 
 
-//
-//$newsQQ = new NewsQQSpider($urls, $headers);
+
+//$newsQQ = new NewsIfengSpider($urls, $headers);
 //$newsQQ->run();
