@@ -36,7 +36,9 @@ class NewsSinaSpider extends BaseSpider
 
     public function run()
     {
-        // $data = $this->getQueryContent("https://tech.sina.com.cn/mobile/n/n/2019-06-03/doc-ihvhiews6524254.shtml");
+       // $data = $this->getQueryContent("https://tech.sina.com.cn/5g/i/2019-06-04/doc-ihvhiews6632234.shtml");
+
+
         foreach ($this->urls as $key => $val) {
             echo "抓取url:" . $val . "----------------";
             $list = $this->getQueryData($val);
@@ -65,19 +67,23 @@ class NewsSinaSpider extends BaseSpider
 
     public function getQueryContent($url)
     {
-        $ql = QueryList::getInstance();
-        $ql->use(\QL\Ext\Chrome::class);
-        $rules = [
-            "source" => [".source", "text"],
-            "content" => ["#artibody", "html"]
-        ];
-        $html = $ql->chrome(function ($page, $browser) use ($url) {
-            $page->goto($url);
-            $html = $page->content();
-            $browser->close();
+        try{
+            $ql = QueryList::getInstance();
+            $ql->use(\QL\Ext\Chrome::class);
+            $rules = [
+                "source" => [".source", "text"],
+                "content" => ["#artibody", "html"]
+            ];
+            $html = $ql->chrome(function ($page, $browser) use ($url) {
+                $page->goto($url);
+                $html = $page->content();
+                $browser->close();
+                return $html;
+            })->rules($rules)->queryData();
             return $html;
-        })->rules($rules)->queryData();
-        return $html;
+        }catch (Exception $e){
+            $this->getQueryContent($url);
+        }
     }
 
     public function getQueryData($url)

@@ -61,25 +61,29 @@ class NewsIfengSpider extends BaseSpider
 
     public function getQueryContent($url)
     {
-        sleep(mt_rand(5, 10));
-        $ql = QueryList::getInstance();
-        $ql->use(\QL\Ext\Chrome::class);
-        $rules = [
-            "content1" => [".main_content-LcrEruCc", "html"],
-            "content2" => [".main_content-1mF1eaKb", "html"]
-        ];
-        $html = $ql->chrome(function ($page, $browser) use ($url) {
-            $page->goto($url);
-            $html = $page->content();
-            $browser->close();
+        try{
+            sleep(mt_rand(5, 10));
+            $ql = QueryList::getInstance();
+            $ql->use(\QL\Ext\Chrome::class);
+            $rules = [
+                "content1" => [".main_content-LcrEruCc", "html"],
+                "content2" => [".main_content-1mF1eaKb", "html"]
+            ];
+            $html = $ql->chrome(function ($page, $browser) use ($url) {
+                $page->goto($url);
+                $html = $page->content();
+                $browser->close();
+                return $html;
+            })->rules($rules)->queryData();
+            if (isset($html[0]['content1']) && $html[0]['content1'] != "") {
+                $html = $html[0]['content1'];
+            } else {
+                $html = $html[0]['content2'];
+            }
             return $html;
-        })->rules($rules)->queryData();
-        if (isset($html[0]['content1']) && $html[0]['content1'] != "") {
-            $html = $html[0]['content1'];
-        } else {
-            $html = $html[0]['content2'];
+        }catch (Exception $e){
+            $this->getQueryContent($url);
         }
-        return $html;
     }
 
     public function getQueryData($url)
@@ -103,9 +107,7 @@ class NewsIfengSpider extends BaseSpider
             $html = $page->content();
             $browser->close();
             return $html;
-        },[
-            'headless'=>false
-        ])->rules($rules)->queryData();
+        })->rules($rules)->queryData();
         return $html;
     }
 }
