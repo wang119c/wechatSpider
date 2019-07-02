@@ -1,18 +1,19 @@
 <?php
-require_once "../vendor/autoload.php";
+
+require_once '../vendor/autoload.php';
 
 use OSS\Core\OssException;
 use OSS\OssClient;
 
-ini_set("display_errors", "On");
+ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
 class AliOss
 {
-    private $accessKeyId = "LTAIW4bx6yxgz6jQ";
-    private $accessKeySecret = "CkvsUAx7oTeqqydNx4tEESLEx1m2me";
-    private $endpoint = "http://oss-cn-beijing.aliyuncs.com";
-    private $bucket = "gaoxiaolianmengshe";
+    private $accessKeyId = '';
+    private $accessKeySecret = '';
+    private $endpoint = 'http://oss-cn-beijing.aliyuncs.com';
+    private $bucket = 'gaoxiaolianmengshe';
 
     public function __construct()
     {
@@ -24,7 +25,7 @@ class AliOss
     }
 
     /**
-     * 上传文件
+     * 上传文件.
      */
     public function uploadFile($url)
     {
@@ -57,23 +58,26 @@ class AliOss
         if (isset($mimes[$type])) {
             $extension = $mimes[$type];
             // 文件名称
-            $object = md5($url) . '.' . $extension;
+            $object = md5($url).'.'.$extension;
             // <yourLocalFile>由本地文件路径加文件名包括后缀组成，例如/users/local/myfile.txt
             $content = file_get_contents($url);
             try {
                 var_dump($this->accessKeyId);
                 $ossClient = new OssClient($this->accessKeyId, $this->accessKeySecret, $this->endpoint);
                 $ossClient->putObject($this->bucket, $object, $content);
+
                 return $object;
             } catch (OssException $e) {
-                print(__FUNCTION__ . ": FAILED\n");
-                print($e->getMessage() . "\n");
+                echo __FUNCTION__.": FAILED\n";
+                echo $e->getMessage()."\n";
                 throw new Exception($e);
+
                 return;
             }
-            print(__FUNCTION__ . ": OK" . "\n");
+            echo __FUNCTION__.': OK'."\n";
         }
     }
+
     // }
 }
 
