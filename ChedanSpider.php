@@ -47,9 +47,14 @@ class ChedanSpider
 
     public function run()
     {
+        $i = 0;
         while (true) {
-            // $list = $this->getQueryData('http://apis.yyuehd.com/api/v2/article/load/list?pageSize=15&category=COMMEND&userId=53b9da50-5cdd-4e74-8e5e-ea943ab3bd4f&net=WIFI&androidId=1017044525367825');
-            $list = $this->getQueryData('http://apis.yyuehd.com/api/v2/article/load/list?pageSize=15&category=COMMEND&userId=c4e585d8-4752-4e6a-9243-cc0111b9e5fd&net=WIFI&androidId=7078044313178878');
+            var_dump($i);
+            if ($i % 2 == 0) {
+                $list = $this->getQueryData('http://apis.yyuehd.com/api/v2/article/load/list?pageSize=15&category=COMMEND&userId=53b9da50-5cdd-4e74-8e5e-ea943ab3bd4f&net=WIFI&androidId=1017044525367825');
+            } else {
+                $list = $this->getQueryData('http://apis.yyuehd.com/api/v2/article/load/list?pageSize=15&category=COMMEND&userId=c4e585d8-4752-4e6a-9243-cc0111b9e5fd&net=WIFI&androidId=7078044313178878');
+            }
             $listArray = (array) json_decode($list, true);
 
             foreach ($listArray['data'] as $item) {
@@ -106,7 +111,8 @@ class ChedanSpider
                     }
                 }
             }
-            sleep(mt_rand(10, 15));
+            ++$i;
+            sleep(mt_rand(5, 10));
         }
     }
 
