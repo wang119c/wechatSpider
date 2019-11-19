@@ -24,12 +24,9 @@ class BaseSpider implements NewsSpider
         $this->db = new Medoo([
             'database_type' => 'mysql',
             'database_name' => 'topai',
-            // 'server' => '47.93.7.208',
-            // 'username' => 'fymysqltest',
-            // 'password' => 'qf1sW2Yb5Kj2mGk6D434'
-            'server' => 'rm-2zerl9k4gio57k0pyo.mysql.rds.aliyuncs.com',
-            'username' => 'shuzidao',
-            'password' => 'bhh0e46iTMsmUHTH'
+            'server' => '',
+            'username' => '',
+            'password' => ''
         ]);
     }
 
