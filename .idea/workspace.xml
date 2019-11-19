@@ -14,20 +14,7 @@
     <executablePath>composer</executablePath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WechatSpider.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WechatSpider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="287" lean-forward="true" selection-start-line="287" selection-end-line="287" />
-              <folding>
-                <element signature="e#121#142#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -35,6 +22,9 @@
       <find>QueryList</find>
       <find>$wechatInfoArr</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -44,6 +34,9 @@
         <option value="$PROJECT_DIR$/vendor/ninvfeng/mysql/src/mysql.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/WechatSpider.php" />
+        <option value="$PROJECT_DIR$/NewsSinaSpider.php" />
+        <option value="$PROJECT_DIR$/NewsQQSpider.php" />
+        <option value="$PROJECT_DIR$/NewsIfengSpider.php" />
       </list>
     </option>
   </component>
@@ -54,7 +47,54 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/node_modules/@nesk/puphpeteer/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/@nesk/rialto/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/lodash/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/agent-base/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/async-limiter/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/balanced-match/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/brace-expansion/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/buffer-from/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/concat-map/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/concat-stream/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/core-util-is/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/es6-promise/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/es6-promisify/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/extract-zip/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/extract-zip/node_modules/ms/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/extract-zip/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/fd-slicer/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/fs.realpath/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/glob/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/https-proxy-agent/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/https-proxy-agent/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/inflight/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/inherits/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/isarray/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/mime/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/minimatch/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/minimist/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/mkdirp/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/ms/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/once/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/path-is-absolute/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/pend/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/process-nextick-args/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/progress/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/proxy-from-env/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/readable-stream/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/rimraf/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/safe-buffer/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/string_decoder/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/typedarray/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/util-deprecate/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/wrappy/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/ws/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/node_modules/yauzl/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/puppeteer/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -90,10 +130,18 @@
       <path value="$PROJECT_DIR$/vendor/houdunwang/cookie" />
       <path value="$PROJECT_DIR$/vendor/catfan/medoo" />
       <path value="$PROJECT_DIR$/vendor/topthink/think-cache" />
+      <path value="$PROJECT_DIR$/vendor/clue/socket-raw" />
+      <path value="$PROJECT_DIR$/vendor/jaeger/querylist-puppeteer" />
+      <path value="$PROJECT_DIR$/vendor/nesk/rialto" />
+      <path value="$PROJECT_DIR$/vendor/nesk/puphpeteer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/vierbergenlars/php-semver" />
+      <path value="$PROJECT_DIR$/vendor/aliyuncs/oss-sdk-php" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="488" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="249" />
+    <option name="y" value="145" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -102,51 +150,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="BlockChainSpider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BlockChainSpider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BlockChainSpider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BlockChainSpider" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BlockChainSpider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BlockChainSpider" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="houdunwang" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BlockChainSpider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BlockChainSpider" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="houdunwang" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BlockChainSpider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BlockChainSpider" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="houdunwang" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BlockChainSpider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BlockChainSpider" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="houdunwang" type="462c0819:PsiDirectoryNode" />
-              <item name="dir" type="462c0819:PsiDirectoryNode" />
+              <item name="wechatSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wechatSpider" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -198,27 +213,31 @@
       <workItem from="1557800465368" duration="1006000" />
       <workItem from="1557822582555" duration="29996000" />
       <workItem from="1557972569487" duration="2997000" />
+      <workItem from="1563764063983" duration="4037000" />
+      <workItem from="1563846949039" duration="4013000" />
+      <workItem from="1563869488384" duration="809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58464000" />
+    <option name="totallyTimeSpent" value="67323000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17697228" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.110341154" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="1.0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.17357223" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -242,6 +261,113 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/WechatSpider.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5244">
+          <caret line="280" column="19" selection-start-line="280" selection-start-column="19" selection-end-line="280" selection-end-column="19" />
+          <folding>
+            <element signature="e#121#142#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsSinaSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="108" column="16" lean-forward="true" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsQQSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1330">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsIfengSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="57" column="35" lean-forward="true" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WechatSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5244">
+          <caret line="280" column="19" selection-start-line="280" selection-start-column="19" selection-end-line="280" selection-end-column="19" />
+          <folding>
+            <element signature="e#121#142#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsSinaSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1824">
+          <caret line="102" column="27" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsQQSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1957">
+          <caret line="111" column="16" lean-forward="true" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsIfengSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1919">
+          <caret line="102" column="38" lean-forward="true" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WechatSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5377">
+          <caret line="287" lean-forward="true" selection-start-line="287" selection-end-line="287" />
+          <folding>
+            <element signature="e#121#142#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WechatSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4940">
           <caret line="264" lean-forward="true" selection-start-line="264" selection-end-line="264" />
           <folding>
@@ -260,56 +386,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlockChainSpider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4047">
-          <caret line="214" column="17" lean-forward="true" selection-start-line="214" selection-start-column="17" selection-end-line="214" selection-end-column="17" />
-          <folding>
-            <element signature="e#121#146#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlockChainSpider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3021">
-          <caret line="160" column="46" lean-forward="true" selection-start-line="160" selection-start-column="46" selection-end-line="160" selection-end-column="46" />
-          <folding>
-            <element signature="e#121#146#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlockChainSpider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2983">
-          <caret line="158" column="162" selection-start-line="158" selection-start-column="162" selection-end-line="158" selection-end-column="162" />
-          <folding>
-            <element signature="e#121#146#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlockChainSpider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5168">
-          <caret line="273" column="24" selection-start-line="273" selection-start-column="22" selection-end-line="273" selection-end-column="24" />
-          <folding>
-            <element signature="e#121#146#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlockChainSpider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6346">
-          <caret line="335" column="13" selection-start-line="335" selection-start-column="8" selection-end-line="335" selection-end-column="13" />
-          <folding>
-            <element signature="e#121#146#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/BlockChainSpider.php" />
+    <entry file="file://$PROJECT_DIR$/BlockChainSpider.php" />
+    <entry file="file://$PROJECT_DIR$/BlockChainSpider.php" />
+    <entry file="file://$PROJECT_DIR$/BlockChainSpider.php" />
+    <entry file="file://$PROJECT_DIR$/BlockChainSpider.php" />
     <entry file="file://$PROJECT_DIR$/vendor/ninvfeng/mysql/src/mysql.php" />
     <entry file="file://$PROJECT_DIR$/temp/cache/7654420ec5b664e50fb568287aa78e1c" />
     <entry file="file://$PROJECT_DIR$/temp/cache/2a9f4ad521425f61da2de01f37909af6" />
@@ -355,23 +436,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlockChainSpider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="32" />
-          <folding>
-            <element signature="e#121#146#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="176" column="25" selection-start-line="176" selection-start-column="25" selection-end-line="176" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php" />
     <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -418,13 +483,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BlockChainSpider.php" />
+    <entry file="file://$PROJECT_DIR$/config/config.php" />
+    <entry file="file://$PROJECT_DIR$/help/Conversion.php" />
+    <entry file="file://$PROJECT_DIR$/lib/AliOss.php" />
     <entry file="file://$PROJECT_DIR$/WechatSpider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="287" lean-forward="true" selection-start-line="287" selection-end-line="287" />
+        <state relative-caret-position="5244">
+          <caret line="280" column="19" selection-start-line="280" selection-start-column="19" selection-end-line="280" selection-end-column="19" />
           <folding>
             <element signature="e#121#142#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsSinaSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsQQSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1330">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsIfengSpider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
         </state>
       </provider>
     </entry>

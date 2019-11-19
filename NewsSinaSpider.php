@@ -100,14 +100,14 @@ class NewsSinaSpider extends BaseSpider
             $page->evaluate(JsFunction::createWithBody("
                  var i = 0 ;
                  var timer = setInterval(function(){
-                    if(i>=20){
+                    if(i>=3){
                         clearInterval(timer);
                     }
                     window.scrollBy(0, i*100);
                     i++;
                  },3000);
             "));
-            sleep(55);
+            sleep(50);
             $html = $page->content();
             $browser->close();
             return $html;

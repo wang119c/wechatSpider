@@ -34,6 +34,13 @@
       <path value="$PROJECT_DIR$/vendor/houdunwang/cookie" />
       <path value="$PROJECT_DIR$/vendor/catfan/medoo" />
       <path value="$PROJECT_DIR$/vendor/topthink/think-cache" />
+      <path value="$PROJECT_DIR$/vendor/clue/socket-raw" />
+      <path value="$PROJECT_DIR$/vendor/jaeger/querylist-puppeteer" />
+      <path value="$PROJECT_DIR$/vendor/nesk/rialto" />
+      <path value="$PROJECT_DIR$/vendor/nesk/puphpeteer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/vierbergenlars/php-semver" />
+      <path value="$PROJECT_DIR$/vendor/aliyuncs/oss-sdk-php" />
     </include_path>
   </component>
 </project>

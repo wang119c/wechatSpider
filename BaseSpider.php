@@ -24,9 +24,12 @@ class BaseSpider implements NewsSpider
         $this->db = new Medoo([
             'database_type' => 'mysql',
             'database_name' => 'topai',
-            'server' => '127.0.0.1',
-            'username' => 'root',
-            'password' => 'root'
+            // 'server' => '47.93.7.208',
+            // 'username' => 'fymysqltest',
+            // 'password' => 'qf1sW2Yb5Kj2mGk6D434'
+            'server' => 'rm-2zerl9k4gio57k0pyo.mysql.rds.aliyuncs.com',
+            'username' => 'shuzidao',
+            'password' => 'bhh0e46iTMsmUHTH'
         ]);
     }
 
@@ -57,7 +60,7 @@ class BaseSpider implements NewsSpider
                 'url' => $data['url'],
                 'summary' => $data['summary'],
                 'catch_type' => $data['catch_type'],
-                'updatetime' => $_SERVER["REQUEST_TIME"]
+                'updatetime' => time()
             ], [
                 'uuid' => $data['uuid']
             ]);
@@ -71,8 +74,8 @@ class BaseSpider implements NewsSpider
                 'summary' => $data['summary'],
                 'uuid' => $data['uuid'],
                 'catch_type' => $data['catch_type'],
-                'createtime' => $_SERVER["REQUEST_TIME"],
-                'updatetime' => $_SERVER["REQUEST_TIME"]
+                'createtime' => time(),
+                'updatetime' => time()
             ]);
         }
     }

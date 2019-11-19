@@ -3,6 +3,7 @@
 require_once "NewsQQSpider.php";
 require_once "NewsIfengSpider.php";
 require_once "NewsSinaSpider.php";
+require_once "NewsSouhuSpider.php";
 
 /**
  * Created by PhpStorm.
@@ -25,6 +26,9 @@ class NewsFactory
                 break;
             case 'sina':
                 return new NewsSinaSpider();
+                break;
+			case 'souhu':
+                return new NewsSouhuSpider();
                 break;
         }
     }

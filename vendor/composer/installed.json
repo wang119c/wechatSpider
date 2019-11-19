@@ -1,5 +1,54 @@
 [
     {
+        "name": "aliyuncs/oss-sdk-php",
+        "version": "v2.3.0",
+        "version_normalized": "2.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/aliyun/aliyun-oss-php-sdk.git",
+            "reference": "e69f57916678458642ac9d2fd341ae78a56996c8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/aliyun/aliyun-oss-php-sdk/zipball/e69f57916678458642ac9d2fd341ae78a56996c8",
+            "reference": "e69f57916678458642ac9d2fd341ae78a56996c8",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": ">=5.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0",
+            "satooshi/php-coveralls": "~1.0"
+        },
+        "time": "2018-01-08T06:59:35+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "OSS\\": "src/OSS"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Aliyuncs",
+                "homepage": "http://www.aliyun.com"
+            }
+        ],
+        "description": "Aliyun OSS SDK for PHP",
+        "homepage": "http://www.aliyun.com/product/oss/"
+    },
+    {
         "name": "cache/adapter-common",
         "version": "1.1.0",
         "version_normalized": "1.1.0.0",
@@ -272,6 +321,69 @@
             "postgresql",
             "sql",
             "sqlite"
+        ]
+    },
+    {
+        "name": "clue/socket-raw",
+        "version": "v1.4.0",
+        "version_normalized": "1.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/clue/php-socket-raw.git",
+            "reference": "2f6654445233407900c9a804490cecd8e4f2ae86"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/clue/php-socket-raw/zipball/2f6654445233407900c9a804490cecd8e4f2ae86",
+            "reference": "2f6654445233407900c9a804490cecd8e4f2ae86",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "ext-sockets": "*",
+            "php": ">=5.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^7.0 || ^6.0 || ^5.2 || ^4.8.35"
+        },
+        "time": "2019-01-22T11:08:01+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Socket\\Raw\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Christian Lück",
+                "email": "christian@lueck.tv"
+            }
+        ],
+        "description": "Simple and lightweight OOP wrapper for PHP's low level sockets extension (ext-sockets)",
+        "homepage": "https://github.com/clue/php-socket-raw",
+        "keywords": [
+            "Socket",
+            "client",
+            "datagram",
+            "dgram",
+            "icmp",
+            "ipv6",
+            "server",
+            "stream",
+            "tcp",
+            "udg",
+            "udp",
+            "unix"
         ]
     },
     {
@@ -1296,6 +1408,54 @@
         ]
     },
     {
+        "name": "jaeger/querylist-puppeteer",
+        "version": "4.0.0",
+        "version_normalized": "4.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jae-jae/QueryList-Puppeteer.git",
+            "reference": "c6bd5acc4c95022bea92ba1308841b863eab2cf0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jae-jae/QueryList-Puppeteer/zipball/c6bd5acc4c95022bea92ba1308841b863eab2cf0",
+            "reference": "c6bd5acc4c95022bea92ba1308841b863eab2cf0",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "nesk/puphpeteer": "^1.4",
+            "php": ">=7.1"
+        },
+        "require-dev": {
+            "jaeger/querylist": "dev-master"
+        },
+        "time": "2019-01-15T10:18:49+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "QL\\Ext\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jaeger",
+                "email": "JaegerCode@gmail.com"
+            }
+        ],
+        "description": "QueryList Plugin: Use Puppeteer to crawl Javascript dynamically rendered pages.(Headless Chrome ) 使用Puppeteer采集JavaScript动态渲染的页面"
+    },
+    {
         "name": "league/flysystem",
         "version": "1.0.51",
         "version_normalized": "1.0.51.0",
@@ -1385,6 +1545,131 @@
             "s3",
             "sftp",
             "storage"
+        ]
+    },
+    {
+        "name": "nesk/puphpeteer",
+        "version": "1.5.0",
+        "version_normalized": "1.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nesk/puphpeteer.git",
+            "reference": "ba815123614ea122f494f2a3af4c4785771f30e2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nesk/puphpeteer/zipball/ba815123614ea122f494f2a3af4c4785771f30e2",
+            "reference": "ba815123614ea122f494f2a3af4c4785771f30e2",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "nesk/rialto": "^1.2.0",
+            "php": ">=7.1",
+            "psr/log": "^1.0",
+            "vierbergenlars/php-semver": "^3.0.2"
+        },
+        "require-dev": {
+            "codedungeon/phpunit-result-printer": ">=0.6 <1.0",
+            "monolog/monolog": "^1.23",
+            "phpunit/phpunit": "^6.5|^7.0",
+            "symfony/process": "^4.0"
+        },
+        "time": "2019-03-17T11:31:33+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Nesk\\Puphpeteer\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Johann Pardanaud",
+                "email": "pardanaud.j@gmail.com"
+            }
+        ],
+        "description": "A Puppeteer bridge for PHP, supporting the entire API.",
+        "keywords": [
+            "automation",
+            "developer-tools",
+            "headless-chrome",
+            "php",
+            "puppeteer",
+            "testing",
+            "web"
+        ]
+    },
+    {
+        "name": "nesk/rialto",
+        "version": "1.3.0",
+        "version_normalized": "1.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nesk/rialto.git",
+            "reference": "2403adc6b5f8fd4114d1ec00d9cce2e6ce3a5656"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nesk/rialto/zipball/2403adc6b5f8fd4114d1ec00d9cce2e6ce3a5656",
+            "reference": "2403adc6b5f8fd4114d1ec00d9cce2e6ce3a5656",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "clue/socket-raw": "^1.2",
+            "php": ">=7.1",
+            "psr/log": "^1.0",
+            "symfony/process": "^3.3|^4.0"
+        },
+        "require-dev": {
+            "codedungeon/phpunit-result-printer": ">=0.6 <1.0",
+            "monolog/monolog": "^1.23",
+            "phpunit/phpunit": "^6.5|^7.0"
+        },
+        "suggest": {
+            "ext-weakref": "Required to run all the tests"
+        },
+        "time": "2019-03-14T20:16:03+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Nesk\\Rialto\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Johann Pardanaud",
+                "email": "pardanaud.j@gmail.com"
+            }
+        ],
+        "description": "Manage Node resources from PHP",
+        "keywords": [
+            "Bridge",
+            "Socket",
+            "communication",
+            "node",
+            "php",
+            "wrapper"
         ]
     },
     {
@@ -1726,6 +2011,63 @@
         ]
     },
     {
+        "name": "symfony/process",
+        "version": "v4.2.8",
+        "version_normalized": "4.2.8.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/process.git",
+            "reference": "8cf39fb4ccff793340c258ee7760fd40bfe745fe"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/process/zipball/8cf39fb4ccff793340c258ee7760fd40bfe745fe",
+            "reference": "8cf39fb4ccff793340c258ee7760fd40bfe745fe",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": "^7.1.3"
+        },
+        "time": "2019-04-10T16:20:36+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.2-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Process\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Process Component",
+        "homepage": "https://symfony.com"
+    },
+    {
         "name": "symfony/var-dumper",
         "version": "v3.3.6",
         "version_normalized": "3.3.6.0",
@@ -1963,347 +2305,5 @@
             "semver",
             "versioning"
         ]
-    },
-    {
-        "name": "symfony/process",
-        "version": "v4.2.8",
-        "version_normalized": "4.2.8.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/process.git",
-            "reference": "8cf39fb4ccff793340c258ee7760fd40bfe745fe"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/process/zipball/8cf39fb4ccff793340c258ee7760fd40bfe745fe",
-            "reference": "8cf39fb4ccff793340c258ee7760fd40bfe745fe",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
-        },
-        "require": {
-            "php": "^7.1.3"
-        },
-        "time": "2019-04-10T16:20:36+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "4.2-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Process\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Process Component",
-        "homepage": "https://symfony.com"
-    },
-    {
-        "name": "clue/socket-raw",
-        "version": "v1.4.0",
-        "version_normalized": "1.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/clue/php-socket-raw.git",
-            "reference": "2f6654445233407900c9a804490cecd8e4f2ae86"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/clue/php-socket-raw/zipball/2f6654445233407900c9a804490cecd8e4f2ae86",
-            "reference": "2f6654445233407900c9a804490cecd8e4f2ae86",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
-        },
-        "require": {
-            "ext-sockets": "*",
-            "php": ">=5.3"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^7.0 || ^6.0 || ^5.2 || ^4.8.35"
-        },
-        "time": "2019-01-22T11:08:01+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Socket\\Raw\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Christian Lück",
-                "email": "christian@lueck.tv"
-            }
-        ],
-        "description": "Simple and lightweight OOP wrapper for PHP's low level sockets extension (ext-sockets)",
-        "homepage": "https://github.com/clue/php-socket-raw",
-        "keywords": [
-            "Socket",
-            "client",
-            "datagram",
-            "dgram",
-            "icmp",
-            "ipv6",
-            "server",
-            "stream",
-            "tcp",
-            "udg",
-            "udp",
-            "unix"
-        ]
-    },
-    {
-        "name": "nesk/rialto",
-        "version": "1.3.0",
-        "version_normalized": "1.3.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/nesk/rialto.git",
-            "reference": "2403adc6b5f8fd4114d1ec00d9cce2e6ce3a5656"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/nesk/rialto/zipball/2403adc6b5f8fd4114d1ec00d9cce2e6ce3a5656",
-            "reference": "2403adc6b5f8fd4114d1ec00d9cce2e6ce3a5656",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
-        },
-        "require": {
-            "clue/socket-raw": "^1.2",
-            "php": ">=7.1",
-            "psr/log": "^1.0",
-            "symfony/process": "^3.3|^4.0"
-        },
-        "require-dev": {
-            "codedungeon/phpunit-result-printer": ">=0.6 <1.0",
-            "monolog/monolog": "^1.23",
-            "phpunit/phpunit": "^6.5|^7.0"
-        },
-        "suggest": {
-            "ext-weakref": "Required to run all the tests"
-        },
-        "time": "2019-03-14T20:16:03+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Nesk\\Rialto\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Johann Pardanaud",
-                "email": "pardanaud.j@gmail.com"
-            }
-        ],
-        "description": "Manage Node resources from PHP",
-        "keywords": [
-            "Bridge",
-            "Socket",
-            "communication",
-            "node",
-            "php",
-            "wrapper"
-        ]
-    },
-    {
-        "name": "nesk/puphpeteer",
-        "version": "1.5.0",
-        "version_normalized": "1.5.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/nesk/puphpeteer.git",
-            "reference": "ba815123614ea122f494f2a3af4c4785771f30e2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/nesk/puphpeteer/zipball/ba815123614ea122f494f2a3af4c4785771f30e2",
-            "reference": "ba815123614ea122f494f2a3af4c4785771f30e2",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
-        },
-        "require": {
-            "nesk/rialto": "^1.2.0",
-            "php": ">=7.1",
-            "psr/log": "^1.0",
-            "vierbergenlars/php-semver": "^3.0.2"
-        },
-        "require-dev": {
-            "codedungeon/phpunit-result-printer": ">=0.6 <1.0",
-            "monolog/monolog": "^1.23",
-            "phpunit/phpunit": "^6.5|^7.0",
-            "symfony/process": "^4.0"
-        },
-        "time": "2019-03-17T11:31:33+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Nesk\\Puphpeteer\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Johann Pardanaud",
-                "email": "pardanaud.j@gmail.com"
-            }
-        ],
-        "description": "A Puppeteer bridge for PHP, supporting the entire API.",
-        "keywords": [
-            "automation",
-            "developer-tools",
-            "headless-chrome",
-            "php",
-            "puppeteer",
-            "testing",
-            "web"
-        ]
-    },
-    {
-        "name": "jaeger/querylist-puppeteer",
-        "version": "4.0.0",
-        "version_normalized": "4.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/jae-jae/QueryList-Puppeteer.git",
-            "reference": "c6bd5acc4c95022bea92ba1308841b863eab2cf0"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/jae-jae/QueryList-Puppeteer/zipball/c6bd5acc4c95022bea92ba1308841b863eab2cf0",
-            "reference": "c6bd5acc4c95022bea92ba1308841b863eab2cf0",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
-        },
-        "require": {
-            "nesk/puphpeteer": "^1.4",
-            "php": ">=7.1"
-        },
-        "require-dev": {
-            "jaeger/querylist": "dev-master"
-        },
-        "time": "2019-01-15T10:18:49+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "QL\\Ext\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jaeger",
-                "email": "JaegerCode@gmail.com"
-            }
-        ],
-        "description": "QueryList Plugin: Use Puppeteer to crawl Javascript dynamically rendered pages.(Headless Chrome ) 使用Puppeteer采集JavaScript动态渲染的页面"
-    },
-    {
-        "name": "aliyuncs/oss-sdk-php",
-        "version": "v2.3.0",
-        "version_normalized": "2.3.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/aliyun/aliyun-oss-php-sdk.git",
-            "reference": "e69f57916678458642ac9d2fd341ae78a56996c8"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/aliyun/aliyun-oss-php-sdk/zipball/e69f57916678458642ac9d2fd341ae78a56996c8",
-            "reference": "e69f57916678458642ac9d2fd341ae78a56996c8",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
-        },
-        "require": {
-            "php": ">=5.3"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "~4.0",
-            "satooshi/php-coveralls": "~1.0"
-        },
-        "time": "2018-01-08T06:59:35+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "OSS\\": "src/OSS"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Aliyuncs",
-                "homepage": "http://www.aliyun.com"
-            }
-        ],
-        "description": "Aliyun OSS SDK for PHP",
-        "homepage": "http://www.aliyun.com/product/oss/"
     }
 ]

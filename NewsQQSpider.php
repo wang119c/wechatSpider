@@ -30,14 +30,14 @@ class NewsQQSpider extends BaseSpider
             "https://new.qq.com/ch2/jinr"
         ];
         $headers = [
-//    'Referer' => 'https://querylist.cc/',
-//    'User-Agent' => 'testing/1.0',
-//    'Accept' => 'application/json',
-//    'X-Foo' => ['Bar', 'Baz'],
-//    // 携带cookie
-//    'Cookie' => 'abc=111;xxx=222',
-//    'cache' => $cache_path,
-//    'cache_ttl' => 600
+            //    'Referer' => 'https://querylist.cc/',
+            //    'User-Agent' => 'testing/1.0',
+            //    'Accept' => 'application/json',
+            //    'X-Foo' => ['Bar', 'Baz'],
+            //    // 携带cookie
+            //    'Cookie' => 'abc=111;xxx=222',
+            //    'cache' => $cache_path,
+            //    'cache_ttl' => 600
         ];
 
         parent::__construct($urls, $headers);
@@ -87,7 +87,6 @@ class NewsQQSpider extends BaseSpider
         return $html;
     }
 
-
     public function getQueryData($url)
     {
         $ql = QueryList::getInstance();
@@ -103,14 +102,14 @@ class NewsQQSpider extends BaseSpider
             $page->evaluate(JsFunction::createWithBody("
                  var i = 0 ;
                  var timer = setInterval(function(){
-                    if(i>=20){
+                    if(i>=3){
                         clearInterval(timer);
                     }
                     window.scrollBy(0, i*100);
                     i++;
                  },3000);
             "));
-            sleep(55);
+            sleep(50);
             $html = $page->content();
             $browser->close();
             return $html;
