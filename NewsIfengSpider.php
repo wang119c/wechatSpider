@@ -99,7 +99,7 @@ class NewsIfengSpider extends BaseSpider
         $html = $ql->chrome(function ($page, $browser) use ($url) {
             $page->goto($url);
             $page->waitForSelector(".news-stream-basic-more");
-            for ($i = 0; $i < 9; $i++) {
+            for ($i = 0; $i < 2; $i++) {
                 sleep(mt_rand(5, 10));
                 $page->waitForSelector(".news-stream-basic-more");
                 $page->click(".news-stream-basic-more");
@@ -111,9 +111,6 @@ class NewsIfengSpider extends BaseSpider
         return $html;
     }
 }
-
-
-
 
 $cache_path = __DIR__ . '/temp/';
 

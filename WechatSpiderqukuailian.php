@@ -1,10 +1,6 @@
 <?php
 /**
- * 第一个 相关 (账号来源)杨源
- * 所用账号 ： 2924981863@qq.com
- * 密码: liantazhiku2019
- * 命令: php WechatSpider.php
- * Created by PhpStorm.
+ * Created by PhpStorm.  区块链相关
  * User: huizi
  * Date: 2019/3/21
  * Time: 12:56
@@ -21,8 +17,12 @@ use think\Cache;
  * 微信文章爬虫
  * Class BlockChainSpider
  */
-class WechatSpider extends BaseWechatSpider
+class WechatSpiderqukuailian extends BaseWechatSpider
 {
+
+   
+
+
     /**
      * 开始
      * Created by PhpStorm.
@@ -47,27 +47,28 @@ class WechatSpider extends BaseWechatSpider
             "accept"    => "application/json, text/javascript, */*; q=0.01",
             "accept-encoding" => "gzip, deflate, br",
             "accept-language" => "zh-CN,zh;q=0.9",
-            "cookie"  => "noticeLoginFlag=1; remember_acct=2924981863%40qq.com; ua_id=ITsepi4ZHhI4kWNTAAAAAE199UJn7p5lTQNM12LJ99M=; pgv_pvi=7430504448; noticeLoginFlag=1; mm_lang=zh_CN; pgv_si=s8392474624; cert=tVpkcKgfuiQdSBaormS4hAIWiWVcwoqT; pgv_info=ssid=s8765013480; pgv_pvid=7656928684; ticket_id=gh_c31c55239d77; uuid=60dabad0640637929031668c60fc10ee; bizuin=3233150208; ticket=2e7b82c3ac29d7ef324783611cc3a588dc64d21c; data_bizuin=3233150208; data_ticket=mu+MToefr4hfdnBedw8nNRzPOVTGOd+azotvjTEbOMqJNv3lz9tOE01tybECT5aq; slave_sid=eTVac2ZYX0ZmaDJUdjdvc0UxeWlMeW1ZZnhvVjBCZzZRMWFVZV9oanZQZ2NuU1ZHQ2F3R3p6dEtkZmZId1Rad1VpMDhURENyQ3BGRGhtUm44UVNEUjBpcDF5WlNuMkJOZUlGUXBsRWdPaGN3T2M2bEdnaWxXb1N0ZFZHcmpLVVBBRUVZeEtFVFNPSms1VTk0; slave_user=gh_c31c55239d77; xid=d23921c688e61885410776b906c36173; openid2ticket_oAPW1wHgP27IBOK8eK7prj7Ko8yo=tItHpX6PMU8EvTtPRUdHnaL6w7S818ZGNw64pTqeXKg=",
+            "cookie"  => "ua_id=ITsepi4ZHhI4kWNTAAAAAE199UJn7p5lTQNM12LJ99M=; pgv_pvi=7430504448; noticeLoginFlag=1; mm_lang=zh_CN; pgv_si=s3085710336; uuid=9b3265c7d8880534952f5889dd02862a; bizuin=3891198127; ticket=aa654f57f53c3601c7af266d3cdb2ee84c759314; ticket_id=gh_de619fef853f; cert=5boXZml4_UexARllPXptd9dM7xM1DU44; data_bizuin=3891198127; data_ticket=C+ofWz8WEYO3KXd3+jgbjwhZQInNYod9eoWK5qvLJmWtulaquX8MGOIrKlYDCd2V; slave_sid=UHJqS2Fyc3EyMmZzaWhMTEo2X2VYZTd6SnNvZzdDOTh4MWVRZlRkcGlGOGtUOEZuaXlSbEFoaWI1YmZ5eFBzdFF1dTJiTExsZFF0VG8zbGlRNWUyUERrVEVDMlNpb0d4cmdUZTNEcmwzVXllZkdDTDVoZzFEdW41MFowdm11aEZXMFBNMmMwQWdoTGlIRTly; slave_user=gh_de619fef853f; xid=fb596fb023b78798a89bff95329c479e; openid2ticket_or_ju50Hc18r5guL33UmLWm_L0P8=cqtNkaMhcipoiI8ZFQy8bs+tWyFwVnmePUZ3SBAwri4=",
             "sec-fetch-mode"  => "cors",
             "sec-fetch-site"  => "same-origin",
             "user-agent"   => "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36",
             "x-requested-with" => "XMLHttpRequest"
         ];
         //定义token
-        $token = 677965424;
+        $token = 798203196;
         $this->setHeader($header);
         $this->setToken($token);
-
     }
 
+    /**
+     * 运行
+     */
     public function run(){
-        
         //这里添加公众号
         $wechatNum = [
-            "weixin21cbr","jjbd21","ipozaozhidao","i-caijing","yibencaijing","shzqbwx","cien_offical","chinafundnews","zxbccn","cetnews","ourcecn","chinabusinessjournal","xhszzb","cn-finance","lanjinghj","everydayP2P","hjtxs0","finance_ifeng","quanshangcn","kongfuf","wallstreetcn","ths518","gjjrb777","cctvyscj","Bloomberg_Daybook","touzishibao","pedaily2012","wabeiwang","sinacaijing","thf-review","jiemian_2014","cbn-yicai","financeapp","fengchao-caijing","rong-data","securitiesdaily","i-caijing","cailianpress","jrjnews2013","JPMMedia","xincaijing","xueqiujinghua","Finance_01","xunyugen","zhaiquanonline","absofchina","abssjqy","cmbjrsc","cn-abs","ftcweixin","REITsResearch","BOND_DCM","ibaoyouqu","baoxianbagua","bixianshanzhuang","FICC_DDRK","buzhoushan-view","cjlhh8888","mofzpy","chahuagujing","dalirufeng","zhihuwangdali","dao_bi_zhai","dudabs","gh_8073c41a1efe","banklawcn2","tradelikewater","fenxishixubiao","gh_674027a57de6","guzhiluoji1982","gh_226be3052602","gushoubinfa","GUSHOU_HUI","gh_14a120787007","glmacro","hanfaye-xu","gh_1f3b102d4a72","hey-stone-money","jiangchao8848","JYYSX13","baguanvpindao","banklawcn","jinrongjielaoqiu","Fivecrossing","jrxhb2014","JIN_FINANCE","TheEconomistGroup","cjlhh588","jiucaishuo",
+            "the31area","finance-91","OKBS2018","findDapp","UPliancan","baweiziben","bitcoin8btc","hellobtc","FinaceRun2018","btc798","daslab","coin_poison","Gamer3477","BitBond007","gh_1d3c0013d7db","gh_2279df4d40e5","SNCrating","boliancaijing","block-edu","chengpishu","Bit-Analysis","i54daxiang","i_dianshi","erduocaijing","fengchao-caijing","ifengblockchain","ConsensusLab","svblock","HXQKL01","hufumoney","HiveEcon","qukuailtz","hxcj24h","gh_b00a8506012a","jiedian2018","nodecapital"
         ];
 
-        $cacheFile = "./cache/WechatSpider.txt" ;
+        $cacheFile = "./cache/WechatSpiderqukuailian.txt" ;
         if(!is_file($cacheFile)){
             file_put_contents($cacheFile,"");
         }
@@ -105,6 +106,5 @@ class WechatSpider extends BaseWechatSpider
     }
 }
 
-$wechat = new WechatSpider();
+$wechat = new WechatSpiderqukuailian();
 $wechat->run();
-

@@ -11,13 +11,12 @@ require_once "BaseSpider.php";
 use Nesk\Rialto\Data\JsFunction;
 use QL\QueryList;
 
-class NewsSinaSpider extends BaseSpider
+class NewsSouhuSpider extends BaseSpider
 {
     public function __construct()
     {
         $urls = [
-            "http://5g.sina.com.cn/",
-            "https://tech.sina.com.cn/internet/"
+            "http://www.sohu.com/tag/59953?spm=smpc.null.side-nav.28.15655882033488cQCQ3j"
         ];
 
         $headers = [
@@ -44,6 +43,10 @@ class NewsSinaSpider extends BaseSpider
             $list = $this->getQueryData($val);
             $time = time();
             foreach ($list as $item) {
+                if(  !isset($item['title'])  || !isset($item['cover']) || !isset($item['href']) ){
+                    return  ; 
+                }
+
                 $data['title'] = isset($item['title']) ? $item['title'] : "";
                 $data['cover'] = isset($item['cover']) ? $item['cover'] : "";
                 $data['summary'] = isset($item['summary']) ? $item['summary'] : "";
@@ -56,9 +59,10 @@ class NewsSinaSpider extends BaseSpider
                     continue;
                 }
                 $data['uuid'] = md5($item['href']);
-                $data['catch_type'] = 4;
+                $data['catch_type'] = 5;
                 $data['createtime'] = $time;
                 $data['updatetime'] = $time;
+
                 $this->writeSql($data);
             }
             sleep(mt_rand(10, 15));
@@ -71,8 +75,8 @@ class NewsSinaSpider extends BaseSpider
             $ql = QueryList::getInstance();
             $ql->use(\QL\Ext\Chrome::class);
             $rules = [
-                "source" => [".source", "text"],
-                "content" => ["#artibody", "html"]
+                "source" => [".article-page .user-info h4", "text"],
+                "content" => ["#mp-editor", "html"]
             ];
             $html = $ql->chrome(function ($page, $browser) use ($url) {
                 $page->goto($url);
@@ -91,9 +95,9 @@ class NewsSinaSpider extends BaseSpider
         $ql = QueryList::getInstance();
         $ql->use(\QL\Ext\Chrome::class);
         $rules = [
-            'title' => ['.ty-card-tt a', 'text'],
-            'href' => [".ty-card-tt a", "href"],
-            'cover' => ['.ty-card-thumb', 'src']
+            'title' => ['.news-list .news-box h4', 'text'],
+            'href' => [".news-list .news-box h4 a", "href"],
+            'cover' => ['.img-do img', 'src']
         ];
         $html = $ql->chrome(function ($page, $browser) use ($url) {
             $page->goto($url);
@@ -107,7 +111,6 @@ class NewsSinaSpider extends BaseSpider
                     i++;
                  },3000);
             "));
-            sleep(50);
             $html = $page->content();
             $browser->close();
             return $html;

@@ -1,9 +1,9 @@
 <?php
 /**
- * 第一个 相关 (账号来源)杨源
- * 所用账号 ： 2924981863@qq.com
- * 密码: liantazhiku2019
- * 命令: php WechatSpider.php
+ * 第四个 相关 (账号来源)王辉
+ * 所用账号 ： 1052430943@qq.com
+ * 密码: wanghui1203
+ * 命令: php WechatSpider3.php
  * Created by PhpStorm.
  * User: huizi
  * Date: 2019/3/21
@@ -21,7 +21,7 @@ use think\Cache;
  * 微信文章爬虫
  * Class BlockChainSpider
  */
-class WechatSpider extends BaseWechatSpider
+class WechatSpider3 extends BaseWechatSpider
 {
     /**
      * 开始
@@ -33,6 +33,7 @@ class WechatSpider extends BaseWechatSpider
     public function __construct()
     {
         parent::__construct();
+
 
         //定义header
         $header = [
@@ -47,27 +48,26 @@ class WechatSpider extends BaseWechatSpider
             "accept"    => "application/json, text/javascript, */*; q=0.01",
             "accept-encoding" => "gzip, deflate, br",
             "accept-language" => "zh-CN,zh;q=0.9",
-            "cookie"  => "noticeLoginFlag=1; remember_acct=2924981863%40qq.com; ua_id=ITsepi4ZHhI4kWNTAAAAAE199UJn7p5lTQNM12LJ99M=; pgv_pvi=7430504448; noticeLoginFlag=1; mm_lang=zh_CN; pgv_si=s8392474624; cert=tVpkcKgfuiQdSBaormS4hAIWiWVcwoqT; pgv_info=ssid=s8765013480; pgv_pvid=7656928684; ticket_id=gh_c31c55239d77; uuid=60dabad0640637929031668c60fc10ee; bizuin=3233150208; ticket=2e7b82c3ac29d7ef324783611cc3a588dc64d21c; data_bizuin=3233150208; data_ticket=mu+MToefr4hfdnBedw8nNRzPOVTGOd+azotvjTEbOMqJNv3lz9tOE01tybECT5aq; slave_sid=eTVac2ZYX0ZmaDJUdjdvc0UxeWlMeW1ZZnhvVjBCZzZRMWFVZV9oanZQZ2NuU1ZHQ2F3R3p6dEtkZmZId1Rad1VpMDhURENyQ3BGRGhtUm44UVNEUjBpcDF5WlNuMkJOZUlGUXBsRWdPaGN3T2M2bEdnaWxXb1N0ZFZHcmpLVVBBRUVZeEtFVFNPSms1VTk0; slave_user=gh_c31c55239d77; xid=d23921c688e61885410776b906c36173; openid2ticket_oAPW1wHgP27IBOK8eK7prj7Ko8yo=tItHpX6PMU8EvTtPRUdHnaL6w7S818ZGNw64pTqeXKg=",
+
+            "cookie"  => "ua_id=ITsepi4ZHhI4kWNTAAAAAE199UJn7p5lTQNM12LJ99M=; pgv_pvi=7430504448; noticeLoginFlag=1; mm_lang=zh_CN; pgv_si=s3085710336; cert=5boXZml4_UexARllPXptd9dM7xM1DU44; uuid=1194e7cf8077bb707ce1ef681ed00925; bizuin=3233150208; ticket=147e6e691d0da1f7c77321406faf83c6adbafc40; ticket_id=gh_c31c55239d77; data_bizuin=3233150208; data_ticket=2x9sD3XUbnOByy14FZugM1neJOJeU+WoAOHmM8O3Wexp2M/IsAGkTUCKQ6Zx8qYU; slave_sid=T2lhdlBUbVlrT3VrbGRRZ1pJN0d3Y0lRVEV6SWxkRGtGVjRheUkzN0lUTmF5NUU1MDROR3VnZXpwQ25qc256aERkcWhzeDdBdlpmREFuQmZBWEFuTVUyRnh3R0hHVkNqTmo0YXF3RGRmdjBhUmQxTlBFTTNpM3NJR2JQTFRRb2d2VVE1UENYbkdzeXh5Y2Zl; slave_user=gh_c31c55239d77; xid=3b32a79503590826eca0cada58825f00; openid2ticket_oAPW1wHgP27IBOK8eK7prj7Ko8yo=fIcOmx+Zxm8rmPGq9iQGV9jke1+4ZtEF+Gy5NV3nDQk=",
+
             "sec-fetch-mode"  => "cors",
             "sec-fetch-site"  => "same-origin",
             "user-agent"   => "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36",
             "x-requested-with" => "XMLHttpRequest"
         ];
         //定义token
-        $token = 677965424;
+        $token = 1822709006;
         $this->setHeader($header);
         $this->setToken($token);
-
     }
 
     public function run(){
-        
         //这里添加公众号
         $wechatNum = [
-            "weixin21cbr","jjbd21","ipozaozhidao","i-caijing","yibencaijing","shzqbwx","cien_offical","chinafundnews","zxbccn","cetnews","ourcecn","chinabusinessjournal","xhszzb","cn-finance","lanjinghj","everydayP2P","hjtxs0","finance_ifeng","quanshangcn","kongfuf","wallstreetcn","ths518","gjjrb777","cctvyscj","Bloomberg_Daybook","touzishibao","pedaily2012","wabeiwang","sinacaijing","thf-review","jiemian_2014","cbn-yicai","financeapp","fengchao-caijing","rong-data","securitiesdaily","i-caijing","cailianpress","jrjnews2013","JPMMedia","xincaijing","xueqiujinghua","Finance_01","xunyugen","zhaiquanonline","absofchina","abssjqy","cmbjrsc","cn-abs","ftcweixin","REITsResearch","BOND_DCM","ibaoyouqu","baoxianbagua","bixianshanzhuang","FICC_DDRK","buzhoushan-view","cjlhh8888","mofzpy","chahuagujing","dalirufeng","zhihuwangdali","dao_bi_zhai","dudabs","gh_8073c41a1efe","banklawcn2","tradelikewater","fenxishixubiao","gh_674027a57de6","guzhiluoji1982","gh_226be3052602","gushoubinfa","GUSHOU_HUI","gh_14a120787007","glmacro","hanfaye-xu","gh_1f3b102d4a72","hey-stone-money","jiangchao8848","JYYSX13","baguanvpindao","banklawcn","jinrongjielaoqiu","Fivecrossing","jrxhb2014","JIN_FINANCE","TheEconomistGroup","cjlhh588","jiucaishuo",
+            "ai_xingqiu","Vogel-AI","rgznai100","aitechnews","VRtrends","aitechtalk","World_2078","AIViews","aicjnews","CAAI-1981","gkzhan","AItists","almosthuman2014","Auto_AI_Tech","tencent_ailab","AI_era","QbitAI","daomawuyu","dingdaoshi123","fstalk","ijincuodao","techread","it-reporter","leijunxiaomi","kaifu","gh_5de1cad32f50","runliu-pub","liu_xingliang","qspyq2015","tanhaojun1962","wang-guanxiong","wanglifen2014","wuxiaobopd","kanshi1314","lawyer_xiaosa","zepinghongguan","zhangming_iwep","Left-Right-007","the31area","finance-91","OKBS2018","findDapp","UPliancan","baweiziben","bitcoin8btc","hellobtc","FinaceRun2018","btc798","daslab","coin_poison","Gamer3477","BitBond007","gh_1d3c0013d7db","gh_2279df4d40e5","SNCrating","boliancaijing","block-edu","chengpishu","Bit-Analysis","i54daxiang","i_dianshi","erduocaijing","fengchao-caijing","ifengblockchain","ConsensusLab","svblock","HXQKL01","hufumoney","HiveEcon","qukuailtz","hxcj24h","gh_b00a8506012a","jiedian2018","nodecapital","lanhubiji","gh_4e1c17126b30","iqklbs","lianchaguan","ChainDD","Block-Chain-Law","gh_a560a2118e05","lianneican","liantazhiku","liantuancaijing","chainnewscom","maitiannews","bitbee24","nvxia9898","itxcl168","blockchain_camp","BCtoplist","qukuailian-lh"
         ];
-
-        $cacheFile = "./cache/WechatSpider.txt" ;
+        $cacheFile = "./cache/WechatSpider3.txt" ;
         if(!is_file($cacheFile)){
             file_put_contents($cacheFile,"");
         }
@@ -80,7 +80,7 @@ class WechatSpider extends BaseWechatSpider
                     $currentIndex = 0 ;
                     $currentValue = $wechatNum[0] ;
                     file_put_contents($cacheFile, sprintf("%s::%d",$currentValue,$currentIndex));
-                    $this->getWechatNum($currentValue);
+                   $this->getWechatNum($currentValue);
                 }else{
                     //获取当前的索引,并进行自增进行抓取
                     $findArr = explode("::",$data);
@@ -96,15 +96,15 @@ class WechatSpider extends BaseWechatSpider
                     //写入数据
                     file_put_contents($cacheFile, sprintf("%s::%d",$currentValue,$currentIndex));
                     //这里进行抓取
-                    $this->getWechatNum($currentValue);
+                   $this->getWechatNum($currentValue);
                 }
             }catch(Exception $e){
                 print(111);
             }
+            sleep(1);
         }
     }
 }
 
-$wechat = new WechatSpider();
+$wechat = new WechatSpider3();
 $wechat->run();
-

@@ -29,9 +29,9 @@ class NewsQQSpider111
         $this->db = new Medoo([
             'database_type' => 'mysql',
             'database_name' => 'topai',
-            'server' => '47.93.204.37',
-            'username' => 'root',
-            'password' => '9jXv57znY4D.B'
+            'server' => '',
+            'username' => '',
+            'password' => ''
         ]);
     }
 
